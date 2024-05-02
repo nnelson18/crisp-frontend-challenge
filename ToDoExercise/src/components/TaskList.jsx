@@ -9,7 +9,7 @@ export function TaskList() {
     <Box>
       <List>
         {tasks.map((task) => (
-          <Task key={task.id} title={task.title} completed={task.completed} />
+          <Task key={task.id} task={task} />
         ))}
       </List>
     </Box>

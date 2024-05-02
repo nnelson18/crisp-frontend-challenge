@@ -8,9 +8,9 @@ import { useSelector } from "react-redux";
 
 export function TaskContainer() {
   return (
-    <Container>
+    <>
       <AddNewTask />
       <TaskList />
-    </Container>
+    </>
   );
 }

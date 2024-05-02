@@ -4,15 +4,22 @@ import backgroundPic from "./assets/background.jpg";
 //import viteLogo from '/vite.svg'
 
 import "./App.css";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
+import { MetricContainer } from "./components/MetricContainer";
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
     <Container maxWidth="sm">
-      <h1 style={{ marginLeft: 32 }}>Todo List</h1>
+      <Typography
+        variant="h4"
+        sx={{ paddingTop: "1rem", paddingBottom: "1rem", fontWeight: "bold" }}
+      >
+        Todo List
+      </Typography>
       <TaskContainer />
+      <MetricContainer />
     </Container>
   );
 }
