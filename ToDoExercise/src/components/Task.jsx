@@ -8,6 +8,7 @@ import {
   Typography,
   IconButton,
   TextField,
+  Chip,
 } from "@mui/material";
 import React, { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -15,11 +16,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import { useDispatch } from "react-redux";
-import {
-  deleteTask,
-  completeTask,
-  editTask,
-} from "../store/taskFunctionsSlice";
+import { deleteTask, checkTask, editTask } from "../store/tasksSlice";
 
 export function Task({ task }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -31,7 +28,7 @@ export function Task({ task }) {
   };
 
   const handleCompleteTask = () => {
-    dispatch(completeTask({ id: task.id, completed: !task.completed }));
+    dispatch(checkTask({ id: task.id, completed: !task.completed }));
   };
 
   const handleEditClick = () => {
@@ -82,13 +79,18 @@ export function Task({ task }) {
             </ListItemIcon>
             <ListItemText
               primary={
-                <Typography
-                  style={{
-                    textDecoration: task.completed ? "line-through" : "none",
-                  }}
-                >
-                  {task.title}
-                </Typography>
+                <Box display="flex" justifyContent="space-between">
+                  <Typography
+                    style={{
+                      textDecoration: task.completed ? "line-through" : "none",
+                    }}
+                  >
+                    {task.title}
+                  </Typography>
+                  {!!task.category && (
+                    <Chip size="small" label={task.category} />
+                  )}
+                </Box>
               }
             />
             <IconButton onClick={handleEditClick}>
