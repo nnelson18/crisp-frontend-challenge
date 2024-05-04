@@ -1,113 +1,24 @@
-/* .header {
-  background: #0D0D0D;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  position: relative;
-}
-
-.newTaskForm {
-  position: absolute;
-  height: 54px;
-  bottom: -27px;
-  width: 100%;
-  max-width: 736px;
-  display: flex;
-  gap: 8px;
-  padding: 0 1rem;
-}
-
-.newTaskForm input {
+html,
+body {
   height: 100%;
-  flex: 1;
-  color: #fff;
-  background: #262626;
-  border: 1px solid #0D0D0D;
-  border-radius: 8px;
-  padding: 0 16px;
-  font-size: 16px;
-}
-
-.newTaskForm input::placeholder {
-  color: #808080;
-}
-
-.newTaskForm button {
-  height: 100%;
-  padding: 0 16px;
-  background: #1E6F9F;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  
-}
-
-* {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
-
-} */
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-image: linear-gradient(
+    to left bottom,
+    #1bbdb8,
+    #25c3b5,
+    #33c9b2,
+    #42cfad,
+    #52d5a8,
+    #64dba1,
+    #77e09a,
+    #8ae593,
+    #a4eb89,
+    #bff17f,
+    #dcf577,
+    #f9f871
+  );
+  background-attachment: fixed;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */ */

@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { undoTask } from "../store/tasksSlice";
-import { Box } from "@mui/material";
-import { Button } from "@mui/base";
+import { Box, Button } from "@mui/material";
 
 const UndoButton = () => {
   const dispatch = useDispatch();
@@ -16,7 +15,7 @@ const UndoButton = () => {
   return (
     <Box>
       <Button
-        variant="contained"
+        variant="outlined"
         onClick={handleUndoClick}
         disabled={isUndoDisabled}
       >

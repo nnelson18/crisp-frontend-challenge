@@ -1,6 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { Gauge } from "@mui/x-charts/Gauge";
-import React from "react";
 import { useSelector } from "react-redux";
 
 export function MetricTasksOpen() {
@@ -13,14 +12,25 @@ export function MetricTasksOpen() {
     totalTasks.length > 0 ? (openTasks.length / totalTasks.length) * 100 : 0;
 
   return (
-    <Box>
-      <Typography sx={{ fontWeight: "bold" }}>Open Tasks:</Typography>
-      <Gauge
-        width={100}
-        height={100}
-        value={percentageCompleted}
-        text={() => `${openTasks.length} / ${totalTasks.length}`}
-      />
-    </Box>
+    <Card
+      sx={{
+        padding: "1rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Box>
+        <Typography sx={{ fontWeight: "bold", textAlign: "center" }}>
+          Open Tasks:
+        </Typography>
+        <Gauge
+          width={200}
+          height={200}
+          value={percentageCompleted}
+          text={() => `${openTasks.length} / ${totalTasks.length}`}
+        />
+      </Box>
+    </Card>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { Box, Typography } from "@mui/material";
 import dayjs from "dayjs";
@@ -25,9 +24,9 @@ export function MetricTaskAvgDuration() {
           .format("HH:mm:ss")
       : 0;
   return (
-    <Box>
-      <Typography sx={{ fontWeight: "bold" }}>
-        Average Completion time: {averageTime}
+    <Box sx={{ marginTop: "1rem" }}>
+      <Typography sx={{ fontWeight: "bold", textAlign: "center" }}>
+        Average Completion Time: {averageTime}
       </Typography>
     </Box>
   );

@@ -4,13 +4,12 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
-  Icon,
   Typography,
   IconButton,
   TextField,
   Chip,
 } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import CheckIcon from "@mui/icons-material/Check";

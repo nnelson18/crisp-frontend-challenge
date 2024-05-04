@@ -1,7 +1,6 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
+import { Box, Card, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
-import { Gauge } from "@mui/x-charts/Gauge";
+import { Gauge, gaugeClasses } from "@mui/x-charts/Gauge";
 
 export function MetricTasksCompleted() {
   const completedTasks = useSelector((state) =>
@@ -15,14 +14,39 @@ export function MetricTasksCompleted() {
       : 0;
 
   return (
-    <Box>
-      <Typography sx={{ fontWeight: "bold" }}>Completed Tasks:</Typography>
-      <Gauge
-        width={100}
-        height={100}
-        value={percentageCompleted}
-        text={() => `${completedTasks.length} / ${totalTasks.length}`}
-      />
-    </Box>
+    // <Card sx={{ padding: "1rem", display: "flex" }}>
+    //   <Typography sx={{ fontWeight: "bold" }}>Completed Tasks:</Typography>
+    //   <Gauge
+    //     width={200}
+    //     height={200}
+    //     value={percentageCompleted}
+    //     text={() => `${completedTasks.length} / ${totalTasks.length}`}
+    //   />
+    // </Card>
+    <Card
+      sx={{
+        padding: "1rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Box>
+        <Typography sx={{ fontWeight: "bold", textAlign: "center" }}>
+          Completed Tasks:
+        </Typography>
+        <Gauge
+          sx={{
+            [`& .${gaugeClasses.valueArc}`]: {
+              fill: "#95E88E",
+            },
+          }}
+          width={200}
+          height={200}
+          value={percentageCompleted}
+          text={() => `${completedTasks.length} / ${totalTasks.length}`}
+        />
+      </Box>
+    </Card>
   );
 }

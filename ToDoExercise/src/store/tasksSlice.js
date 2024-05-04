@@ -3,11 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
-    tasks: [
-      //   { id: 1, title: "task1", category: "work", completed: true },
-      //   { id: 2, title: "task2", category: "work", completed: false },
-      //   { id: 3, title: "task3", category: "work", completed: false },
-    ],
+    tasks: [],
     history: [],
     categories: [],
     filters: [],
@@ -20,7 +16,6 @@ const tasksSlice = createSlice({
         completed: false,
         startTime: Date.now(),
         endTime: null,
-        // category: action.payload.category,
       };
       if (action.payload.category.length > 0) {
         newTask.category = action.payload.category;
@@ -36,10 +31,6 @@ const tasksSlice = createSlice({
     },
 
     deleteTask: (state, action) => {
-      //     state.history.push({type: 'delete', task: deletedTask});
-      //   return {
-      //     tasks: state.tasks.filter((task) => task.id !== action.payload.id),
-      //   };
       const taskIndex = state.tasks.findIndex(
         (task) => task.id === action.payload.id
       );
@@ -66,7 +57,6 @@ const tasksSlice = createSlice({
         ? null
         : Date.now();
       state.tasks[index].completed = action.payload.completed;
-      console.log(state.tasks[index].endTime);
     },
 
     editTask: (state, action) => {
