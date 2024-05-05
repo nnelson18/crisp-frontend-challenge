@@ -1,5 +1,5 @@
 import { Box, Card, Typography } from "@mui/material";
-import { Gauge } from "@mui/x-charts/Gauge";
+import { Gauge, gaugeClasses } from "@mui/x-charts/Gauge";
 import { useSelector } from "react-redux";
 
 export function MetricTasksOpen() {
@@ -25,6 +25,11 @@ export function MetricTasksOpen() {
           Open Tasks:
         </Typography>
         <Gauge
+          sx={{
+            [`& .${gaugeClasses.valueText}`]: {
+              fontSize: "1.5rem",
+            },
+          }}
           width={200}
           height={200}
           value={percentageCompleted}

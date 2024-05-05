@@ -14,15 +14,6 @@ export function MetricTasksCompleted() {
       : 0;
 
   return (
-    // <Card sx={{ padding: "1rem", display: "flex" }}>
-    //   <Typography sx={{ fontWeight: "bold" }}>Completed Tasks:</Typography>
-    //   <Gauge
-    //     width={200}
-    //     height={200}
-    //     value={percentageCompleted}
-    //     text={() => `${completedTasks.length} / ${totalTasks.length}`}
-    //   />
-    // </Card>
     <Card
       sx={{
         padding: "1rem",
@@ -37,6 +28,9 @@ export function MetricTasksCompleted() {
         </Typography>
         <Gauge
           sx={{
+            [`& .${gaugeClasses.valueText}`]: {
+              fontSize: "1.5rem",
+            },
             [`& .${gaugeClasses.valueArc}`]: {
               fill: "#95E88E",
             },

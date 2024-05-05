@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleFilter } from "../store/tasksSlice";
 
 export function FilterTask() {
-  const categories = useSelector((state) => state.tasks.categories);
-  const filters = useSelector((state) => state.tasks.filters);
+  const { categories, filters } = useSelector((state) => ({
+    categories: state.tasks.categories,
+    filters: state.tasks.filters,
+  }));
+
   const dispatch = useDispatch();
 
   const handleCategoryClick = (category) => {

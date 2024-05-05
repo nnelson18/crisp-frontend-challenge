@@ -36,7 +36,7 @@ export function AddNewTask() {
           <Grid item xs={5}>
             <TextField
               size="small"
-              label="Add category..."
+              label="Add a category..."
               variant="outlined"
               sx={{ flex: 1, mr: 1, height: "100%" }}
               value={category}

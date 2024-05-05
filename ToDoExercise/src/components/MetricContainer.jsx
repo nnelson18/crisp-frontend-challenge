@@ -25,7 +25,6 @@ export function MetricContainer() {
           <MetricTasksOpen />
         </Grid>
       </Grid>
-
       <MetricTaskAvgDuration />
     </>
   );
